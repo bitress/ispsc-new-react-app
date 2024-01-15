@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import AddNews from './components/addNews.jsx';
 import PostNews from './components/postNews.jsx';
 import newsData from './records/news.json';
+import './App.css'
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -26,11 +27,15 @@ function App() {
     setPosts((prevPosts) => [newPost, ...prevPosts]);
   };
 
-  const deleteNews = (id) => {
-    setPosts((prevPosts) =>
-      prevPosts.filter((post) => post.id !== id)
-    );
-  };
+const deleteNews = (id) => {
+  console.log('Deleting post with id:', id);
+
+  setPosts((prevPosts) => {
+    const newPosts = prevPosts.filter((post) => post.id !== id);
+    console.log('New posts after deletion:', newPosts);
+    return newPosts;
+  });
+};
 
   return (
     <main>
