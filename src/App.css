@@ -1,0 +1,138 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: beige;
+  padding-left: 150px;
+  padding-right: 150px;
+  margin: 0;
+}
+
+main {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 1em;
+}
+
+h1 {
+  color: #39ac39;
+  text-align: center;
+}
+
+
+/* add posts form */
+
+form {
+  background-color: white;  
+  box-shadow: 10px 10px;
+  border: 1px solid black;
+  padding: 1em;
+  border-radius: 5px;
+  width: 100%;
+  margin: auto;
+  max-width: 400px;
+}
+
+form h2 {
+  color: #39ac39;
+  text-align: center;
+  margin-top: 0;
+}
+
+.input-container {
+  background-color: white;
+  display: flex;   
+  margin-bottom: 1em;
+}
+
+label, input, textarea {
+  color: #39ac39;
+  display: block;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+}
+
+label {
+  margin-right: 1em;
+  font-weight: bold;
+}
+
+textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+.btn-submit {
+  color: white;
+  background-color: #008ae6;
+  font-size: 18px;
+  margin: auto;
+  display: block;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: all, 0.5s;
+}
+
+.btn-submit:hover, .btn-submit:focus {
+  transform: scale(1.1);
+   transition: all, 0.5s;
+}
+
+/* Posts */
+
+.posts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.posts-container h2 {
+  color: #39ac39;
+  text-align: center;
+  margin-top: 0;
+  grid-column: 1/-1;
+}
+
+.post-card {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5em;
+  position: relative;
+}
+
+.post-title {
+  color: #39ac39;
+  margin-top: 0;
+}
+
+.post-body {
+  margin-bottom: 50px; 
+}
+
+.btn-delete {
+  color: white;
+  background-color: #cc0000;
+  position: absolute;
+  bottom: 10px;
+  left: 30%;
+  right: 30%;
+  font-size: 16px;
+  margin: auto;
+  display: block;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: all, 0.5s;
+}
+
+.btn-delete:hover, .btn-delete:focus {
+  transform: scale(1.1);
+   transition: all, 0.5s;
+}
